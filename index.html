@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore - Seven Wonders</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222;
+      --accent-color: #ffb300;
+      --card-bg: #f9f9f9;
+      --nav-bg: #111;
+    }
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eaeaea;
+      --card-bg: #1e1e1e;
+      --nav-bg: #000000;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--nav-bg);
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a.active, nav a:hover {
+      color: var(--accent-color);
+    }
+    .wonders-section {
+      padding: 100px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: var(--accent-color);
+    }
+    .wonder-slide {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .wonder-slide:hover {
+      transform: translateY(-5px);
+    }
+    .wonder-info {
+      flex: 1;
+      padding-right: 30px;
+    }
+    .wonder-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .wonder-info p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .wonder-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (max-width: 768px) {
+      .wonder-slide {
+        flex-direction: column;
+        text-align: center;
+      }
+      .wonder-info {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+      .wonder-img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">7 Wonders</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#" class="active">Explore</a>
+    </nav>
+  </header>
+
+  <section class="wonders-section">
+    <h1 class="section-title">Explore the 7 Wonders</h1>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Great Wall of China</h2>
+        <p>The Great Wall stretches over 13,000 miles and was built to protect Chinese states from invasions.</p>
+      </div>
+      <img src="china..jpg" class="wonder-img" alt="Great Wall of China">
+    </div>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Petra, Jordan</h2>
+        <p>Petra is an ancient rock-cut city known for its pink sandstone cliffs and water conduit system.</p>
+      </div>
+      <img src="petra..jpg" class="wonder-img" alt="Petra">
+    </div>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Christ the Redeemer</h2>
+        <p>Standing atop Corcovado mountain, this 98-ft tall statue overlooks Rio de Janeiro, Brazil.</p>
+      </div>
+      <img src="christ.jpg" class="wonder-img" alt="Christ the Redeemer">
+    </div>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Machu Picchu, Peru</h2>
+        <p>This Incan citadel in the Andes mountains remains one of the world's greatest archaeological sites.</p>
+      </div>
+      <img src="machu.jpg" class="wonder-img" alt="Machu Picchu">
+    </div>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Chichen Itza, Mexico</h2>
+        <p>An ancient Mayan city famous for its large pyramid, El Castillo, and astronomical significance.</p>
+      </div>
+      <img src="itza..jpg" class="wonder-img" alt="Chichen Itza">
+    </div>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Roman Colosseum</h2>
+        <p>This Roman amphitheatre could hold 50,000 spectators and hosted gladiator battles and dramas.</p>
+      </div>
+      <img src="roman..jpg" class="wonder-img" alt="Roman Colosseum">
+    </div>
+
+    <div class="wonder-slide fade-in">
+      <div class="wonder-info">
+        <h2>Taj Mahal, India</h2>
+        <p>A white marble mausoleum built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal.</p>
+      </div>
+      <img src="taj...jpg" class="wonder-img" alt="Taj Mahal">
+    </div>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    faders.forEach(fade => {
+      observer.observe(fade);
+    });
+  </script>
+</body>
+</html>
